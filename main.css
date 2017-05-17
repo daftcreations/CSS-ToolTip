@@ -1,0 +1,106 @@
+body{
+    background: radial-gradient(circle at 0% 50%,#ff4b1f,#ff9068);
+    margin: 0px;
+    padding: 0px;
+}
+#main{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url(logo.png);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+#border{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px dashed black;
+    border-radius: 50%;
+    transform: scale(1.1);
+    transition: all 5s;
+}
+#main:hover #border{
+    animation: borderRotate 3s infinite linear;
+}
+@-webkit-keyframes borderRotate{
+    from{
+        transform: rotate(0deg) scale(1.1);
+    }
+    to{
+        transform: rotate(360deg) scale(1.1);
+    }
+}
+#tooltip{
+    display: inline-block;
+    height: 220px;
+    width: 170px;
+    background-color:whitesmoke;
+    box-shadow: 0px 0px 5px silver;
+    position: absolute;
+    top:100%;
+    left: 50%;
+    transform: translate(-50%,10%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s;
+}
+#tooltip:before{
+    content: '\25b2';
+    font-size: 20px;
+    color:whitesmoke;
+    position: absolute;
+    top:-17px;
+    left: 50%;
+    transform: translate(-50%);
+}
+#main:hover #tooltip{
+    transform: translate(-50%,0%);
+    opacity: 1;
+    visibility: visible;
+}
+#bigcircle{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background-image: url(logo.png);
+    background-size: 120%;
+    background-position: center;
+    margin: 25px 45px;
+}
+h3{
+    font-family: arial;
+    font-size: 14px;
+    color:gray;
+    text-align: center;
+    margin: 0px;
+}
+h6{
+    font-family: arial;
+    font-size: 12px;
+    color: gray;
+    text-align: center;
+    margin: 10px;
+}
+#heart{
+    display: inline-block;
+    font-size: 20px;
+    color:tomato;
+    margin: 0px 5px 0px 60px;
+}
+#rate{
+    display: inline-block;
+    font-family: arial;
+    font-size: 13px;
+    color:gray;
+}
+
+
